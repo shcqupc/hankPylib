@@ -1,0 +1,1 @@
+@py.exe -3 strSample.py
