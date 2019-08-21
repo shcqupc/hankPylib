@@ -1,3 +1,4 @@
+#! python3
 theBoard = {'top-L': ' ', 'top-M': ' ', 'top-R': ' ',
             'mid-L': ' ', 'mid-M': ' ', 'mid-R': ' ',
             'low-L': ' ', 'low-M': ' ', 'low-R': ' '}
@@ -47,7 +48,7 @@ def checkWin(board):
                     win = 'N'
 
                 if win == 'Y':
-                    print('vertical x:',x,' y:',y)
+                    #print('vertical x:',x,' y:',y)
                     return 'Y'
                 
                 try:
@@ -59,7 +60,7 @@ def checkWin(board):
                     win = 'N'
 
                 if win == 'Y':
-                    print('vertical x:',x,' y:',y)
+                    #print('vertical x:',x,' y:',y)
                     return 'Y'
                 
                 try:
@@ -71,7 +72,7 @@ def checkWin(board):
                     win = 'N'
 
                 if win == 'Y':
-                    print('down cross x:',x,' y:',y)
+                    #print('down cross x:',x,' y:',y)
                     return 'Y'
 
                 try:

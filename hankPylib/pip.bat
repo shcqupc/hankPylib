@@ -1,5 +1,5 @@
 echo on
-cd C:\Users\hanksu\AppData\Local\Programs\Python\Python37\Scripts\
+cd D:\Programs\Python\Python37\Scripts
 pip install pyperclip
 pip install send2trash
 pip install requests
@@ -13,3 +13,4 @@ pip install pyzmail
 pip install twilio
 pip install pillow
 pip install pyautogui
+pip install pywin32
