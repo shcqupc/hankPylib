@@ -27,6 +27,11 @@ print("for i in range(len(supplies)):")
 for i in range(len(supplies)):
     print('Index ' + str(i) + ' in supplies is: ' + supplies[i])
 
+
+
+
+
+
 print(chr(10))
 print("----------Multiple assignment trick----------")  
 cat = ['fat', 'orange', 'loud']
@@ -98,3 +103,10 @@ list1[3][1] = 99
 print('list1:',list1)
 print('list2:',list2)
 print('list3:',list3)
+
+print('\n--------------pop-------------')
+print(list3.pop(2))
+print(list3)
+
+string = []
+string.remove()
