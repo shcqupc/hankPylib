@@ -107,6 +107,3 @@ print('list3:',list3)
 print('\n--------------pop-------------')
 print(list3.pop(2))
 print(list3)
-
-string = []
-string.remove()
