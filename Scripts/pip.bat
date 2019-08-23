@@ -1,16 +1,16 @@
 echo on
-cd D:\Programs\Python\Python37\Scripts
-pip install pyperclip
-pip install send2trash
-pip install requests
-pip install beautifulsoup4
-pip install selenium
-pip install openpyxl==2.1.4
-pip install PyPDF2
-pip install python-docx
-pip install imapclient
-pip install pyzmail
-pip install twilio
-pip install pillow
-pip install pyautogui
-pip install pywin32
+cd D:\Anaconda3\pkgs\pip-19.1.1-py37_0\Scripts\
+pip.exe install pyperclip
+pip.exe install send2trash
+pip.exe install requests
+pip.exe install beautifulsoup4
+pip.exe install selenium
+pip.exe install openpyxl==2.1.4
+pip.exe install PyPDF2
+pip.exe install python-docx
+pip.exe install imapclient
+pip.exe install pyzmail
+pip.exe install twilio
+pip.exe install pillow
+pip.exe install pyautogui
+pip.exe install pywin32
