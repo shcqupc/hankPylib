@@ -1,4 +1,5 @@
 import re
+
 '''
 vstr = 'Agent Alice told Agent Carol that Agent Eve knew Agent Bob was a double agent.'
 regex = re.compile(r"Agent (\w)\w*")
@@ -45,3 +46,11 @@ print(nfx.search(vstr2))
 print(nfx.search(vstr3))
 print(nfx.search(vstr4))
 print(nfx.search(vstr5))
+
+emailRegex = re.compile(r'''(
+    [a-zA-Z0-9._%+-]+      # username
+    @                      # @ symbol
+    [a-zA-Z0-9.-]+         # domain name
+    (\.[a-zA-Z]{2,4})      # dot-something
+    )''', re.VERBOSE)
+print(emailRegex.search('sdfascde% hank_h_su@manulife.com ()fasdfas'))
