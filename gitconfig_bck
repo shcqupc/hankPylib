@@ -8,3 +8,5 @@
 	ss = status -s
 	cmt = commit -m
 	cmta = commit -a -m
+	oga = --oneline --graph --all
+
