@@ -1,0 +1,10 @@
+[user]
+	name = Hank Su
+	email = hank_h_su@manulife.com
+[gui]
+	recentrepo = D:/work/GIT/gitblog
+[alias]
+	last = log -1 HEAD
+	ss = status -s
+	cmt = commit -m
+	cmta = commit -a -m
