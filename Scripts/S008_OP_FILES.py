@@ -1,4 +1,7 @@
+# -*-conding:utf-8-*-
 import os
+
+from Scripts.Sources import myCats
 
 print('\n-----------------os.getcwd-------------------')
 print(os.getcwd())
@@ -30,34 +33,54 @@ print('os.path.isfile', os.path.isfile(os.getcwd()))
 print('os.path.isdir', os.path.isdir(os.getcwd()))
 
 print('\n---------------read()--------------------')
-file1 = open(os.path.join(os.getcwd(), 'new_file'))
+file1 = open(os.path.join(os.getcwd(), r'Sources\new_file'))
 old_content1 = file1.read()
 print(file1.read())
 file1.close()
-file2 = open(os.path.join(os.getcwd(), 'new_file'))
+file2 = open(os.path.join(os.getcwd(), r'Sources\new_file'))
 print('file2.readlines()', file2.readlines())
 file2.close()
-file3 = open(os.path.join(os.getcwd(), 'new_file'))
+file3 = open(os.path.join(os.getcwd(), r'Sources\new_file'))
 old_content2 = file3.readline()
 print('file3.readline()', old_content2)
 file3.close()
 
 print('\n---------------write()---------------------')
-file4 = open(os.path.join(os.getcwd(), 'new_file'), 'w')
+file4 = open(os.path.join(os.getcwd(), r'Sources\new_file'), 'w')
 file4.write(old_content2)
 file4.close()
-file4 = open(os.path.join(os.getcwd(), 'new_file'), 'a')
+file4 = open(os.path.join(os.getcwd(), r'Sources\new_file'), 'a')
 file4.write(old_content1)
 file4.close()
 
-file4 = open(os.path.join(os.getcwd(), 'new_file'), 'r')
+file4 = open(os.path.join(os.getcwd(), r'Sources\new_file'), 'r')
 print(file4.read())
 file4.close()
 
-print('\n----------------shelve --------------------')
+print('\n----------------shelve write-------------------')
 import shelve
 
 shelfFile = shelve.open('Sources\shelfFile')
 cats = ['Zophie', 'Pooka', 'Simon']
 shelfFile['cats'] = cats
 shelfFile.close()
+print('\n----------------shelve read--------------------')
+shelfFile = shelve.open('Sources\shelfFile')
+print(shelfFile['cats'])
+print('shelfFile.keys()', list(shelfFile.keys()))
+shelfFile.close()
+
+print('\n----------------pprint and import--------------------')
+import pprint
+
+cats = [{'name': 'Zophie', 'desc': 'chubby'}, {'name': 'Pooka', 'desc': 'fluffy'}]
+print(cats)
+pprint.pprint(cats)
+# print(pprint.pformat(cats))
+fileObj = open('sources\myCats.py', 'w')
+fileObj.write('cats = ' + pprint.pformat(cats) + '\n')
+fileObj.close()
+
+import Scripts.Sources.myCats
+
+print(myCats.cats)
