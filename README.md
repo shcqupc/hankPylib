@@ -1,2 +1,2 @@
 # hankPylib
-collections of python scripts created by my self
+collections of python scripts created by myself
