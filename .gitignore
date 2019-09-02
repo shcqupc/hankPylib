@@ -1,2 +1,3 @@
 venv
 Sources/
+__pycache__/
