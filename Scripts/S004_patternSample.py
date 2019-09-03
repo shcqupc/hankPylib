@@ -39,6 +39,7 @@ print('group findall:',regexGrp.findall(message))
 print('groups:',regexGrp.search(message).groups())
 print('group0:',regexGrp.search(message).group(0))
 print('group1:',regexGrp.search(message).group(1))
+print('group2:',regexGrp.search(message).group(2))
 areaCode, mainNumber = regexGrp.search(message).groups()
 print(areaCode,mainNumber,sep=' ** ')
 
@@ -103,11 +104,18 @@ print(Regex1.search('<To serve man>abc <for dinner>').group())
 Regex2 = re.compile(r'<.*>')
 print(Regex2.search('<To serve man>abc <for dinner>').group())
 
+print('\n-------------non-greedy for dot-star-----------------------')
+nongreedyRegex = re.compile(r'<.*?>')
+mo = nongreedyRegex.search('<To serve man> for dinner.>')
+print(mo.group())
+
 print('\n--------re.DOTALL---------')
 noNewline = re.compile('.*')
 print(noNewline.search('Serve the public trust.\nProtect the innocent.\nUphold the law.').group())
 newLine = re.compile('.*', re.DOTALL)
 print(newLine.search('Serve the public trust.\nProtect the innocent.\nUphold the law.').group())
+
+
 
 print('\n--------Case-Insensitive---------')
 vStr = 'abCDefG'
