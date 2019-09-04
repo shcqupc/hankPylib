@@ -9,4 +9,4 @@
 	cmt = commit -m
 	cmta = commit -a -m
 	oga = --oneline --graph --all
-
+	dfom = diff origin master
