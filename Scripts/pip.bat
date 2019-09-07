@@ -5,7 +5,7 @@ pip.exe install send2trash
 pip.exe install requests
 pip.exe install beautifulsoup4
 pip.exe install selenium
-pip.exe install openpyxl==2.1.4
+pip.exe install openpyxl
 pip.exe install PyPDF2
 pip.exe install python-docx
 pip.exe install imapclient

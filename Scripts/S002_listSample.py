@@ -113,3 +113,8 @@ print('list3:', list3)
 print('\n--------------pop-------------')
 print(list3.pop(2))
 print(list3)
+
+print('\n---------------list+list---------------------')
+list1 = [1,2,3,4,5]
+list2 = [6,7,8]
+print(list1 + list2)
