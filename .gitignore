@@ -1,4 +1,4 @@
 venv
 *sources/
 __pycache__/
-.idea
+.xmind
