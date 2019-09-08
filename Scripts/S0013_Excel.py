@@ -11,7 +11,9 @@ sheet3 = wb.worksheets[0]
 print('worksheets[0].title', sheet3.title)
 print('wb.active.title', wb.active.title)
 print('sheet3.max_column', sheet3.max_column)
-print(sheet3['A1':'B3'])
+print(r"sheet3['A1':'B3']", sheet3['A1':'B3'])
+print("sheet3['B$']", sheet3['B$'])
+print("list(sheet3.columns)[1]", list(sheet3.columns)[2])
 
 print('\n---------------Getting Cells---------------------')
 cell1 = wb.active.cell(2, 5)
