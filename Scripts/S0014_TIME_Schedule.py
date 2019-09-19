@@ -4,7 +4,7 @@ import cProfile as cp
 
 print(time.time())
 
-'''
+
 def calcProd():
     # Calculate the product of the first 100,000 numbers.
     product = 1
@@ -13,6 +13,7 @@ def calcProd():
     return product
 
 
+'''
 startTime = time.time()
 prod = 0
 cp.run('prod = calcProd()')
@@ -77,10 +78,29 @@ def takeANap():
     time.sleep(5)
     print('Wake up!')
 
-threadObj = threading.Thread(target=takeANap())
-threadObj.start()
 
+def test():
+    for i in range(5):
+        print('test ', i)
+        time.sleep(1)
+
+
+thread = threading.Thread(target=test)
+thread.start()
+
+for i in range(5):
+    print('main ', i)
+    time.sleep(1)
+
+# threadObj = threading.Thread(target=takeANap())
+# threadObj = threading.Thread(target=print(calcProd()))
+# threadObj.start()
 # threadObj1 = threading.Thread(target=print, args=['Cats', 'Dogs', 'Frogs'], kwargs={'sep': ' & '})
 # threadObj1.start()
-
 print('End of program.')
+
+
+print('\n-----------------Launching Other Programs from Python-------------------')
+import subprocess
+import os
+subprocess.Popen("C:\Program Files\internet explorer\iexplore.exe")
