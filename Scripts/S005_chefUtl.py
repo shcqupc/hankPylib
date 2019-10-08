@@ -36,9 +36,13 @@ def pivotList(vList):
         print(row)
 
 
-def countChar(vString):
+def countChar(vstr):
     count = {}
-    for x in vString:
+    for x in vstr:
         count.setdefault(x, 0)
         count[x] = count[x] + 1
     print(count)
+
+print("Please input a string")
+vstr = input()
+countChar(vstr)

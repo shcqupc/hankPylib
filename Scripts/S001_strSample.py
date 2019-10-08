@@ -1,9 +1,9 @@
 #! python3
 print("'\\n' == chr(10)", '\n' == chr(10))
 print("'\\\"' == chr(34)", '\"' == chr(34))
-print("'\\\'' == chr(34)", '\'' == chr(39))
-print("'\\t' == chr(34)", '\t' == chr(9))
-print("'\\\\' == chr(34)", '\\' == chr(92))
+print("'\\\'' == chr(39)", '\'' == chr(39))
+print("'\\t' == chr(9)", '\t' == chr(9))
+print("'\\\\' == chr(92)", '\\' == chr(92))
 print('\n')
 print(r"'\n' == chr(10)", '\n' == chr(10))
 print(r"'\"' == chr(34)", '\"' == chr(34))

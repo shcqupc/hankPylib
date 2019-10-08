@@ -18,5 +18,4 @@ while n <= 15:
 def multInput(a, *b):
     print(a + ":" + str(b))
 
-
 multInput('ab', 'cd', 'ef', 'gh', 'ij')
