@@ -1,4 +1,5 @@
 venv
 *sources/
 __pycache__/
-.xmind
+PyKits/*.bat
+*.xmind
