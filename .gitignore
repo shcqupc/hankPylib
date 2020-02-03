@@ -2,4 +2,5 @@ venv
 *sources/
 __pycache__/
 PyKits/*.bat
+Scripts/pip.bat
 *.xmind
