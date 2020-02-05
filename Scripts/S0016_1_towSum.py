@@ -45,15 +45,22 @@ class Solution3(object):
         :type target: int
         :rtype: List[int]
         """
-        hashmap = {}
-        for index, num in enumerate(nums):
-            another_num = target - num
-            if another_num in hashmap:
-                return [hashmap[another_num], index]
-            hashmap[num] = index
+        hashmap={}
+        for idx, value in enumerate(nums):
+            chk = target - value
+            if chk in list(hashmap.values()):
+                return [list(hashmap.keys())[list(hashmap.values()).index(chk)], idx]
+            else:
+                hashmap.setdefault(idx, value)
+                
+            #if chk in hashmap:
+                #return [hashmap[chk], idx]
+            #hashmap[value]=idx
+
+            print('hashmap:',hashmap)
         return None
 
 s = Solution3()
-rslt = s.twoSum([2, 7, 11, 15],13)
+rslt = s.twoSum([2, 11, 7, 15],17)
 print(rslt)
 
