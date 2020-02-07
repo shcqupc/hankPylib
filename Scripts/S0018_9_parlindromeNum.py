@@ -1,51 +1,42 @@
-print(-2**31,2**31-1)
 class Solution(object):
-    def reverse(self, x):
-        """
-        :type x: int
-        :rtype: int
-        """
-        def absrev(x):
-            lst = list(str(x))
-            lst.reverse()
-            if x==0:
-                return x
-            else:
-                return int(''.join(lst).lstrip('0'))
-
-        if x < -pow(2,31) or x > pow(2,31)-1:
-            return 0            
-        
-        if x<0:
-            rlst = -absrev(-x)
+    def isPalindrome(self, x):
+        if x < 0:
+            return False
         else:
-            rlst = absrev(x)
-
-        if rlst < -pow(2,31) or rlst > pow(2,31)-1:
-            return 0
+            fac=1
+            while(x //fac >=10):
+                fac *=10
+            while(x>0):
+                left = x//fac
+                right = x %10
+                x = x%fac//10
+                fac /=100
+                print(left,right,x,fac)
+                if left != right:
+                    return False         
+        return True
 
 s = Solution()
-rslt = s.reverse(9646324351)
-print(rslt) 
-
-#-2147483648
-#2147483647
-class Solution2(object):
-    def reverse(self, x):
-        y , res = abs(x), 0
-        if x < 0:
-            boundary = 1<<31
-        else:
-            boundary = (1<<31)-1
-        
-        while(y!=0):
-            res = res*10 + y%10
-            y //= 10
-            if res > boundary:
-                return 0
-        return -res if x<0 else res
-
-
-s = Solution2()
-rslt = s.reverse(-46324351)
+rslt = s.isPalindrome(1)
 print(rslt)         
+
+
+class Solution2(object):
+    def isPalindrome(self, x):
+        if x < 0:
+            return False
+        else:        
+            rev = 0 
+            while(x > rev):
+                rev = rev*10 + x % 10
+                if rev == 0:
+                    return False
+                x //=10
+        print(rev,x)
+        if x == rev or x == rev //10:
+            return True
+        return False
+    
+s = Solution2()
+rslt = s.isPalindrome(10)
+print(rslt)      
