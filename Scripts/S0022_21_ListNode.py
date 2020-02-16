@@ -14,9 +14,18 @@ class Solution:
         return l1 or l2
 
 
-n1 = ListNode("1->2->4")
-n2 = ListNode("1->3->4")
-print(n1.val, n2.val)
+l14 = ListNode(4)
+l12 = ListNode(2)
+l12.next = l14
+l11 = ListNode(1)
+l11.next = l12
+
+l24 = ListNode(4)
+l23 = ListNode(3)
+l23.next = l24
+l21 = ListNode(1)
+l21.next = l23
+
 s = Solution()
-rslt = s.mergeTwoLists(n1, n2)
-print(rslt.val)
+rlst=s.mergeTwoLists(l11, l21)
+print(rlst)
