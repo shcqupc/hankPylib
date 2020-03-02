@@ -37,6 +37,12 @@ print('\n')
 print('------------pyperclip----------------')
 import pyperclip
 print('inpuy pyperclip.copy:')
-pause = input()
-pyperclip.copy(pause)
-pyperclip.paste()
+# pause = input()
+# pyperclip.copy(pause)
+# pyperclip.paste()
+
+print('\n-------------slicing-----------------------')
+s= "eabddf"
+print(s[:-1])
+print(s[::-1])
+print(s[::-2])
