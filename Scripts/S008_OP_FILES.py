@@ -1,7 +1,7 @@
 # -*-conding:utf-8-*-
 import os
 
-from Scripts.Sources import myCats
+# from Scripts.Sources import myCats
 
 print('\n-----------------os.getcwd-------------------')
 print(os.getcwd())
@@ -81,6 +81,6 @@ fileObj = open('sources\myCats.py', 'w')
 fileObj.write('cats = ' + pprint.pformat(cats) + '\n')
 fileObj.close()
 
-import Scripts.Sources.myCats
+# import Scripts.Sources.myCats
 
-print(myCats.cats)
+# print(myCats.cats)

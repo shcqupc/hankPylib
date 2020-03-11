@@ -62,5 +62,5 @@ n2.next.next = ListNode(5)
 
 s = Solution()
 s.printList(n1)
-s.printList(s.reverseList1(n1))
-s.printList(s.reverseList2(n2))
+# s.printList(s.reverseList1(n1))
+s.printList(s.reverseList2(n1))
