@@ -84,3 +84,12 @@ fileObj.close()
 # import Scripts.Sources.myCats
 
 # print(myCats.cats)
+
+#####################################################
+# endswith
+#####################################################
+relevant_path = "[path to folder]"
+included_extensions = ['jpg','jpeg', 'bmp', 'png', 'gif']
+file_names = [fn for fn in os.listdir(relevant_path)
+
+              if any(fn.endswith(ext) for ext in included_extensions)]
